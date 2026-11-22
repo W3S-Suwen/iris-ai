@@ -144,51 +144,70 @@
           <h2>Powerful Features. Smarter Screening.</h2>
           <p>Explore the intelligent tools designed to simplify retinal screening workflows.</p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <div class="feature-icon">
-              ♙
+        <div class="feature-console reveal" data-feature-console>
+          <div class="console-topbar">
+            <div class="console-brand"><span class="console-mark">I</span><b>IRIS Intelligence</b></div>
+            <div class="console-status"><i></i>Screening workspace ready</div>
+            <span class="console-id">CASE / 0284</span>
+          </div>
+          <div class="console-layout">
+            <div class="feature-visual" aria-label="Interactive retinal screening preview">
+              <div class="visual-copy">
+                <span>AI screening layer</span>
+                <h3 data-feature-title>Patient Registration</h3>
+                <p data-feature-summary>A structured start for every screening journey.</p>
+              </div>
+              <div class="retina-preview">
+                <img src="assets/iris-retina-scan.png" alt="Retinal fundus screening preview">
+                <div class="retina-scan" aria-hidden="true"></div>
+                <span class="target target-one" aria-hidden="true"></span>
+                <span class="target target-two" aria-hidden="true"></span>
+                <div class="preview-badge"><span>AI</span><b data-feature-progress>Patient record initialized</b></div>
+              </div>
+              <div class="console-metrics" aria-hidden="true">
+                <div><span>Image quality</span><strong>98.4%</strong><i><b style="width:98%"></b></i></div>
+                <div><span>Analysis state</span><strong data-feature-state>Ready</strong><i><b style="width:72%"></b></i></div>
+              </div>
             </div>
-            <h3>Patient Registration</h3>
-            <p>Register patients and manage relevant screening information through a structured
-            digital workflow.</p>
-          </article>
-          <article class="feature-card reveal">
-            <div class="feature-icon">
-              ⇧
+            <div class="feature-grid" role="list" aria-label="IRIS AI platform capabilities">
+              <article class="feature-card is-active" tabindex="0" role="listitem" data-feature-card data-title="Patient Registration" data-summary="A structured start for every screening journey." data-progress="Patient record initialized" data-state="Ready">
+                <div class="feature-card-top"><span class="feature-icon">01</span><i>Foundation</i></div>
+                <h3>Patient Registration</h3>
+                <p>Register patients and manage relevant screening information through a structured digital workflow.</p>
+                <span class="feature-link">Explore capability</span>
+              </article>
+              <article class="feature-card" tabindex="0" role="listitem" data-feature-card data-title="Retinal Image Upload" data-summary="Fundus images move into a focused, frictionless workspace." data-progress="Fundus image received" data-state="Uploaded">
+                <div class="feature-card-top"><span class="feature-icon">02</span><i>Input</i></div>
+                <h3>Retinal Image Upload</h3>
+                <p>Upload and preview retinal fundus images through an intuitive interface before screening.</p>
+                <span class="feature-link">Explore capability</span>
+              </article>
+              <article class="feature-card" tabindex="0" role="listitem" data-feature-card data-title="Retinal Image Validation" data-summary="Quality checks help prepare every image for reliable analysis." data-progress="Quality checks passed" data-state="Validated">
+                <div class="feature-card-top"><span class="feature-icon">03</span><i>Quality</i></div>
+                <h3>Retinal Image Validation</h3>
+                <p>Check whether uploaded images meet the requirements for AI analysis.</p>
+                <span class="feature-link">Explore capability</span>
+              </article>
+              <article class="feature-card" tabindex="0" role="listitem" data-feature-card data-title="AI-Powered Retinal Analysis" data-summary="Intelligent analysis surfaces potential retinal indicators." data-progress="AI screening in progress" data-state="Analyzing">
+                <div class="feature-card-top"><span class="feature-icon">04</span><i>Intelligence</i></div>
+                <h3>AI-Powered Retinal Analysis</h3>
+                <p>Process images to identify potential signs associated with diabetic retinopathy.</p>
+                <span class="feature-link">Explore capability</span>
+              </article>
+              <article class="feature-card" tabindex="0" role="listitem" data-feature-card data-title="Screening Results" data-summary="Clear findings are organized for confident professional review." data-progress="Clinical view generated" data-state="Complete">
+                <div class="feature-card-top"><span class="feature-icon">05</span><i>Insight</i></div>
+                <h3>Screening Results</h3>
+                <p>Present AI-generated findings in a clear dashboard for healthcare professionals.</p>
+                <span class="feature-link">Explore capability</span>
+              </article>
+              <article class="feature-card" tabindex="0" role="listitem" data-feature-card data-title="Screening History" data-summary="Every screening stays organized for continuous patient context." data-progress="Longitudinal record updated" data-state="Archived">
+                <div class="feature-card-top"><span class="feature-icon">06</span><i>Continuity</i></div>
+                <h3>Screening History</h3>
+                <p>Review previous patient screenings and their associated results.</p>
+                <span class="feature-link">Explore capability</span>
+              </article>
             </div>
-            <h3>Retinal Image Upload</h3>
-            <p>Upload and preview retinal fundus images through an intuitive interface before
-            screening.</p>
-          </article>
-          <article class="feature-card reveal">
-            <div class="feature-icon">
-              ✓
-            </div>
-            <h3>Retinal Image Validation</h3>
-            <p>Check whether uploaded images meet the requirements for AI analysis.</p>
-          </article>
-          <article class="feature-card reveal">
-            <div class="feature-icon">
-              ✦
-            </div>
-            <h3>AI-Powered Retinal Analysis</h3>
-            <p>Process images to identify potential signs associated with diabetic retinopathy.</p>
-          </article>
-          <article class="feature-card reveal">
-            <div class="feature-icon">
-              ◫
-            </div>
-            <h3>Screening Results</h3>
-            <p>Present AI-generated findings in a clear dashboard for healthcare professionals.</p>
-          </article>
-          <article class="feature-card reveal">
-            <div class="feature-icon">
-              ↻
-            </div>
-            <h3>Screening History</h3>
-            <p>Review previous patient screenings and their associated results.</p>
-          </article>
+          </div>
         </div>
         <div class="workflow" data-workflow>
           <div class="workflow-stage">
@@ -466,6 +485,25 @@
     );
 
     reveals.forEach((element) => revealObserver.observe(element));
+
+    const featureConsole = document.querySelector('[data-feature-console]');
+    const featureCards = [...document.querySelectorAll('[data-feature-card]')];
+
+    const activateFeature = (card) => {
+      if (!featureConsole || !card) return;
+
+      featureCards.forEach((item) => item.classList.toggle('is-active', item === card));
+      featureConsole.querySelector('[data-feature-title]').textContent = card.dataset.title;
+      featureConsole.querySelector('[data-feature-summary]').textContent = card.dataset.summary;
+      featureConsole.querySelector('[data-feature-progress]').textContent = card.dataset.progress;
+      featureConsole.querySelector('[data-feature-state]').textContent = card.dataset.state;
+    };
+
+    featureCards.forEach((card) => {
+      card.addEventListener('mouseenter', () => activateFeature(card));
+      card.addEventListener('focus', () => activateFeature(card));
+      card.addEventListener('click', () => activateFeature(card));
+    });
 
     const workflow = document.querySelector('[data-workflow]');
     const workflowCards = [...document.querySelectorAll('[data-workflow-step]')];
