@@ -408,12 +408,6 @@ img {
 .dash-retina {
   height: 90px;
   border-radius: 15px;
-  background: url("assets/iris-retina-hero.png") 71% 50% / cover;
-}
-
-.dash-retina {
-  height: 90px;
-  border-radius: 15px;
   background: url("../images/iris-retina-hero.png") 71% 50% / cover;
 }
 
@@ -541,8 +535,7 @@ img {
 }
 
 .hi-icon,
-.feature-icon,
-.step-icon {
+.feature-icon {
   display: grid;
   width: 48px;
   height: 48px;
@@ -1238,6 +1231,10 @@ img {
 /* Inquiry */
 #inquiry {
   background: var(--white);
+}
+
+.inquiry-lead {
+  color: var(--muted);
 }
 
 .inquiry-grid {
