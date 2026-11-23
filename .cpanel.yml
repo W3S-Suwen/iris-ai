@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/iris-ai.lk/
+    - /bin/mkdir -p $DEPLOYPATH/assets
+    - /bin/cp -f index.html favicon.ico robots.txt sitemap.xml site.webmanifest .htaccess $DEPLOYPATH
+    - /bin/cp -Rf assets/* $DEPLOYPATH/assets/
